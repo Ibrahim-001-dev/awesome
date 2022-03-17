@@ -1,0 +1,198 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #8000FF url("../images/Rectangle/1.png");
+  background-size: cover;
+  color: white;
+  font-family: poppins;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+section, header {
+  width: 70%;
+  margin: 0, auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 2em;
+}
+
+.a logo {
+  font-weight: bold;
+  font: 2.5em;
+  padding: 0px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul a {
+  padding: 2.5em 1.5em;
+  display: block;
+}
+
+nav ul li.active a {
+  font-weight: bold;
+  background: white;
+  color: black;
+  margin-left: 2em;
+  padding: 2.5em;
+}
+
+h1 {
+  font-size: 5rem;
+  width: 40%;
+  line-height: 5rem;
+  margin-left: 2em;
+  margin-top: 3.5em;
+}
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% auto 6em;
+      grid-template-columns: 75% auto 6em;
+  opacity: 0;
+  -webkit-transform: translateX(10%) scale(0.9);
+          transform: translateX(10%) scale(0.9);
+  pointer-events: none;
+}
+
+.left, .right, .middle {
+  height: 100vh;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+  opacity: 0;
+}
+
+h2 {
+  color: #8000FF;
+  font-size: 5em;
+  margin: 0;
+}
+
+.left {
+  padding: 8em 10em;
+}
+
+.left p.subhead {
+  color: black;
+  font-size: 1.5em;
+  margin-top: -.5em;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5em;
+}
+
+.cards .card {
+  padding: 2em;
+  -webkit-box-shadow: 15px 15px 53px rgba(128, 0, 255, 0.11);
+          box-shadow: 15px 15px 53px rgba(128, 0, 255, 0.11);
+  border-radius: 1em;
+}
+
+.cards .card strong {
+  color: black;
+}
+
+.cards .card p {
+  color: #393241;
+}
+
+.cards .card:nth-of-type(2) {
+  margin-left: 2em;
+}
+
+.cards .card .cta {
+  padding: .5em 1em;
+  border-radius: .3em;
+  text-decoration: none;
+  background: #8000FF;
+  margin-top: 1em;
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+}
+
+.cards .card .pay-once {
+  background: #EAD5FF;
+  color: #37007E;
+}
+
+.middle {
+  padding-top: 10em;
+}
+
+.middle a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  padding: .4em 0;
+  display: block;
+}
+
+.middle .secondary a:hover {
+  color: #8000FF;
+}
+
+.middle .social-nav {
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.middle a:hover svg path {
+  fill: #8000FF;
+}
+
+.right {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  background-color: #8000FF;
+}
+
+.exit {
+  margin-top: 1.2em;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
