@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -113,23 +119,27 @@
     ></script>
 
     <script>
-        let open = document.querySelector('.active');
-        let close = document.querySelector('exit');
-        let tl = gsap.timeline();
+      let open = document.querySelector(".active");
+      let close = document.querySelector("exit");
+      let tl = gsap.timeline();
 
+      tl.to(".overlay", {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        pointerEvents: auto,
+        duration: 0.3,
+      });
+      tl.to(".stagger", { x: 0, capacity: 1, stagger: 0.2 }, "-=.6");
+      tl.pause();
 
-        tl.to('.overlay', {opacity: 1, x:0, scale:1, pointerEvents: auto, duration: .3})
-        tl.to('.stagger', {x:0, capacity: 1, stagger: .2}, "-=.6")
-        tl.pause();
+      open.addEventListner("click", () => {
+        tl.play();
+      });
 
-        open.addEventListner('click', () => {
-            tl.play();
-        })
-
-        close.addEventListner('click', () => {
-            tl.reverse();
-        })
-
+      close.addEventListner("click", () => {
+        tl.reverse();
+      });
     </script>
   </body>
 </html>
